@@ -72,3 +72,6 @@ wari-frontend/
 │   └── styles/          # Konfigurasi global CSS & Tailwind
 ├── tailwind.config.ts   # Konfigurasi kustom tema Tailwind
 └── next.config.js       # Konfigurasi output static export
+
+
+By : Abdussalam & Marwan Wisnu
