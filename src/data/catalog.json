@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Arjuna",
+    "character": "Pandawa",
+    "price": 10000,
+    "available": true,
+    "description": "Kesatria tampan dengan panah sakti, simbol ketampanan dan keadilan",
+    "philosophy": "Melambangkan kesetiaan, keberanian, dan kejujuran dalam menghadapi ujian hidup",
+    "image": "/images/arjuna.svg",
+    "color": "#4A7C2E"
+  },
+  {
+    "id": 2,
+    "name": "Werkudara (Bima)",
+    "character": "Pandawa",
+    "price": 10000,
+    "available": true,
+    "description": "Raksasa perkasa dengan kuku pancanaka, simbol kekuatan fisik",
+    "philosophy": "Melambangkan keberanian, ketulusan hati, dan pembela kaum tertindas",
+    "image": "/images/werkudara.svg",
+    "color": "#5C3D2E"
+  },
+  {
+    "id": 3,
+    "name": "Yudhistira",
+    "character": "Pandawa",
+    "price": 10000,
+    "available": true,
+    "description": "Raja adil Pandawa, simbol kebijaksanaan dan kebenaran",
+    "philosophy": "Melambangkan kejujuran, kesabaran, dan keadilan dalam memimpin",
+    "image": "/images/yudhistira.svg",
+    "color": "#D4AF37"
+  },
+  {
+    "id": 4,
+    "name": "Nakula",
+    "character": "Pandawa",
+    "price": 10000,
+    "available": false,
+    "description": "Kembaran Sadewa, ahli pedang dan kecantikan",
+    "philosophy": "Melambangkan kesetiaan, keahlian, dan keindahan budi pekerti",
+    "image": "/images/nakula.svg",
+    "color": "#8B4513"
+  },
+  {
+    "id": 5,
+    "name": "Sadewa",
+    "character": "Pandawa",
+    "price": 10000,
+    "available": true,
+    "description": "Adik kembar Nakula, cerdas dan pandai astronomi",
+    "philosophy": "Melambangkan kecerdasan, pengetahuan, dan ketajaman berpikir",
+    "image": "/images/sadewa.svg",
+    "color": "#2D5016"
+  },
+  {
+    "id": 6,
+    "name": "Srikandi",
+    "character": "Pandawa",
+    "price": 10000,
+    "available": true,
+    "description": "Kesatria wanita tangguh, ahli panah dan bela diri",
+    "philosophy": "Melambangkan keberanian wanita, kemandirian, dan kesetaraan gender",
+    "image": "/images/srikandi.svg",
+    "color": "#C71585"
+  }
+]

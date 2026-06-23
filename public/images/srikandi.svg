@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="200" height="400">
+  <rect width="200" height="400" fill="#F5F1E8" rx="10"/>
+  <g transform="translate(100, 200)">
+    <path d="M -20,-150 L -30,-120 L -15,-100 L 0,-110 L 15,-100 L 30,-120 L 20,-150 Z" fill="#C71585" stroke="#2D5016" stroke-width="2"/>
+    <ellipse cx="0" cy="-90" rx="25" ry="30" fill="#C71585" stroke="#2D5016" stroke-width="2"/>
+    <circle cx="-8" cy="-95" r="2" fill="#1A1A1A"/>
+    <circle cx="8" cy="-95" r="2" fill="#1A1A1A"/>
+    <path d="M -30,-60 L -40,50 L 40,50 L 30,-60 Z" fill="#C71585" stroke="#2D5016" stroke-width="2"/>
+    <rect x="-20" y="50" width="15" height="80" fill="#C71585" stroke="#2D5016" stroke-width="2"/>
+    <rect x="5" y="50" width="15" height="80" fill="#C71585" stroke="#2D5016" stroke-width="2"/>
+  </g>
+  <text x="100" y="380" font-family="serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2D5016">Srikandi</text>
+</svg>

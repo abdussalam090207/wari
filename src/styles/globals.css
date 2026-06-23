@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wari-green: #2D5016;
+  --wari-gold: #D4AF37;
+  --wari-cream: #F5F1E8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--wari-cream);
+  color: #1A1A1A;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--wari-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wari-green);
+  border-radius: 5px;
+}
+
+.batik-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.08) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(45, 80, 22, 0.08) 2px, transparent 2px);
+  background-size: 60px 60px;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.15);
+}
