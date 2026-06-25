@@ -2,6 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { Package, Scissors, Palette, Sparkles, ArrowRight, MessageCircle } from 'lucide-react'
+import { fadeUp } from '@/lib/animations/variants'
+import MagneticButton from '@/lib/animations/MagneticButton'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Process() {
   const steps = [
@@ -60,10 +64,10 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-wari-green mb-4 font-serif">
             Proses 3R
@@ -85,11 +89,11 @@ export default function Process() {
                 }`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <div className="flex-1 w-full">
-                  <div className={`bg-gradient-to-br ${step.color} p-8 rounded-2xl shadow-xl text-white`}>
+                  <div className={`bg-gradient-to-br ${step.color} p-8 rounded-2xl shadow-xl text-white transform hover:scale-[1.02] transition-transform duration-300`}>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
                         <step.icon className="w-8 h-8" />
@@ -122,11 +126,11 @@ export default function Process() {
         </div>
 
         <motion.div
-          className="mt-20 bg-gradient-to-r from-wari-green to-wari-green-light rounded-3xl p-12 text-center text-white shadow-2xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          className="mt-24 bg-gradient-to-br from-wari-green to-wari-green-light rounded-3xl p-12 text-center text-white shadow-2xl"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           <h3 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
             Ingin Belajar Langsung?
@@ -135,15 +139,21 @@ export default function Process() {
             Kami membuka workshop daur ulang wayang untuk sekolah dan komunitas. 
             Hubungi kami untuk informasi lebih lanjut!
           </p>
-          <a
-            href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20workshop%20daur%20ulang%20wayang%20WARI"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-wari-gold text-wari-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-wari-gold-light transition-all shadow-lg"
-          >
-            <MessageCircle className="w-6 h-6" />
-            Daftar Workshop
-          </a>
+          <div className="flex justify-center">
+            <MagneticButton>
+              <Button asChild size="lg" className="bg-wari-gold text-wari-dark hover:bg-wari-gold/90 font-bold text-lg px-8 h-14 rounded-full shadow-lg">
+                <a
+                  href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20workshop%20daur%20ulang%20wayang%20WARI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Daftar Workshop
+                </a>
+              </Button>
+            </MagneticButton>
+          </div>
         </motion.div>
       </div>
     </section>

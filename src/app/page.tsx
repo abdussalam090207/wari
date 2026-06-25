@@ -1,20 +1,24 @@
-import Navbar from '@/components/Common/Navbar'
-import Hero from '@/components/Home/Hero'
-import Catalog from '@/components/Catalog/Catalog'
-import Process from '@/components/Home/Process'
-import Impact from '@/components/Home/Impact'
-import Team from '@/components/Home/Team'
-import Footer from '@/components/Common/Footer'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import HeroNew from '@/features/home/components/HeroNew'
+import VisionMission from '@/features/home/components/VisionMission'
+import ImpactPreview from '@/features/home/components/ImpactPreview'
+import TargetMarket from '@/features/home/components/TargetMarket'
+import MarketVisualization from '@/features/home/components/MarketVisualization'
+import WhyWARI from '@/features/home/components/WhyWARI'
+import FinalCTA from '@/features/home/components/FinalCTA'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-wari-cream">
+    <main className="min-h-screen bg-white">
       <Navbar />
-      <Hero />
-      <Catalog />
-      <Process />
-      <Impact />
-      <Team />
+      <HeroNew />
+      <VisionMission />
+      <ImpactPreview />
+      <TargetMarket />
+      <MarketVisualization />
+      <WhyWARI />
+      <FinalCTA />
       <Footer />
     </main>
   )

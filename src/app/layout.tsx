@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
+import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import AnimationProvider from '@/components/providers/AnimationProvider'
+import ScrollProgress from '@/components/layout/ScrollProgress'
 
 export const metadata: Metadata = {
   title: 'WARI - Wayang Lestari | Melestarikan Budaya, Menyelamatkan Bumi',
@@ -14,8 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="id">
-      <body>{children}</body>
+    <html lang="id" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ScrollProgress />
+          <AnimationProvider>
+            {children}
+          </AnimationProvider>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

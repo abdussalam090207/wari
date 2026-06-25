@@ -4,27 +4,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --wari-green: #2D5016;
-  --wari-gold: #D4AF37;
-  --wari-cream: #F5F1E8;
+@layer base {
+  :root {
+    --wari-green: #2D5016;
+    --wari-gold: #D4AF37;
+    --wari-cream: #F5F1E8;
+
+    --background: 40 33% 98%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    --primary: 142 57% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 20% 95%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 40 20% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 68% 51%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 45 68% 51%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 0 0% 9%;
+    --foreground: 40 33% 98%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 40 33% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 40 33% 98%;
+
+    --primary: 142 57% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 33% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 68% 51%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 45 68% 51%;
+  }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+  }
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--wari-cream);
-  color: #1A1A1A;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
